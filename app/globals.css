@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #1e293b; /* slate-800 색상 */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col;
+  }
+  /* 폰트 깨짐 방지 */
+  html, body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  /* 이미지 원본 크기 방지 (가장 중요) */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
